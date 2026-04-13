@@ -1,13 +1,13 @@
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Paintbrush, HardHat, Image, Star, BadgeQuestionMark  } from 'lucide-react'
 import logo from '../assets/header/logo.svg'
 import { useState } from 'react'
 
 const navLinks = [
-  { href: '#services', label: 'Services'},
-  { href: '#about', label: 'About'},
-  { href: '#gallery', label: 'Gallery'},
-  { href: '#reviews', label: 'Reviews'},
-  { href: '#faq', label: 'FAQ'}
+  { href: '#services', label: 'Services', icon: Paintbrush },
+  { href: '#about', label: 'About', icon: HardHat },
+  { href: '#gallery', label: 'Gallery', icon: Image },
+  { href: '#reviews', label: 'Reviews', icon: Star },
+  { href: '#faq', label: 'FAQ', icon: BadgeQuestionMark}
 ]
 
 const Header = () => {
@@ -48,15 +48,19 @@ const Header = () => {
       </nav>
       {mobileMenuIsOpen && 
           <div className='md:hidden bg-foreground bg-blur-lg text-white font-medium animate-in slide-in-from-top duration-300'>
-            <div className='px-4 py-4 sm:py-6 space-y-3 sm:space-y-4'>
-              {navLinks.map(({href, label}) => (
+            <div className='px-4 py-10 sm:py-6 space-y-6 sm:space-y-4'>
+              {navLinks.map(({href, label, icon: Icon}) => (
                 <a 
                   key={label}
                   href={href} 
                   onClick={() => setMobileMenuIsOpen(false)}
                   className='block hover:text-muted lg:text-base'
                 >
-                  {label}
+                  <div className='flex gap-2'>
+                    {<Icon />} 
+                    {label}
+                  </div>
+                  
                 </a>
               ))}
             </div>
