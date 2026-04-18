@@ -2,12 +2,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-foreground: #242424;
+  
   --color-primary: #f04c24;
+  --color-foreground: #242424;
   --color-muted: #4b545d;
 }
 
 @layer base {
+  
   html {
     scroll-behavior: smooth;
   }
@@ -53,6 +55,9 @@
 
   .delay-300 {
     animation-delay: 300ms;
+  }
+    .delay-400 {
+    animation-delay: 400ms;
   }
 }
 

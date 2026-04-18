@@ -14,8 +14,8 @@ const Header = () => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
 
   return (
-    <section className="fixed top-0 w-full md:border-b md:border-foreground/20 bg-white/20 backdrop-blur-sm z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="fixed top-0 w-full px-4 sm:px-6 lg:px-16 md:border-b md:border-foreground/20 bg-white/20 backdrop-blur-sm z-50">
+      <nav className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
           <div className='flex items-end space-x-1 group cursor-pointer'>
             <div>
@@ -33,7 +33,7 @@ const Header = () => {
                 {label}
               </a>
             ))}
-            <button className='text-white bg-foreground text-sm font-semibold px-6 py-3 rounded-[10px] cursor-pointer'>
+            <button className='text-white bg-foreground text-sm font-semibold px-6 py-3 rounded-lg cursor-pointer'>
               Contact Today
             </button>
           </div>
