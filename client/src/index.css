@@ -56,31 +56,34 @@
   .delay-300 {
     animation-delay: 300ms;
   }
-    .delay-400 {
+  .delay-400 {
     animation-delay: 400ms;
+  }
+  .delay-500 {
+    animation-delay: 500ms;
   }
 }
 
 @keyframes slideInFromBottom {
   from {
     opacity: 0;
-    trasnform: translateY(1rem);
+    transform: translateY(1rem);
   }
 
   to {
     opacity: 1;
-    trasnform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes slideInFromTop {
   from {
     opacity: 0;
-    trasnform: translateY(-1rem);
+    transform: translateY(-1rem);
   }
 
   to {
     opacity: 1;
-    trasnform: translateY(0);
+    transform: translateY(0);
   }
 }

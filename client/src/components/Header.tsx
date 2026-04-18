@@ -14,8 +14,8 @@ const Header = () => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
 
   return (
-    <section className="fixed top-0 w-full px-4 sm:px-6 lg:px-16 md:border-b md:border-foreground/20 bg-white/20 backdrop-blur-sm z-50">
-      <nav className="max-w-7xl mx-auto">
+    <header className="fixed top-0 w-full md:border-b md:border-foreground/20 bg-white/20 backdrop-blur-sm z-50">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
           <div className='flex items-end space-x-1 group cursor-pointer'>
             <div>
@@ -47,26 +47,25 @@ const Header = () => {
         </div>
       </nav>
       {mobileMenuIsOpen && 
-          <div className='md:hidden bg-foreground bg-blur-lg text-white font-medium animate-in slide-in-from-top duration-300'>
-            <div className='px-4 py-10 sm:py-6 space-y-6 sm:space-y-4'>
+          <div className='md:hidden bg-foreground/95 backdrop-blur-lg text-white font-medium animate-in slide-in-from-top duration-300'>
+            <div className='px-4 py-8 sm:py-6 space-y-4 sm:space-y-4'>
               {navLinks.map(({href, label, icon: Icon}) => (
                 <a 
                   key={label}
                   href={href} 
                   onClick={() => setMobileMenuIsOpen(false)}
-                  className='block hover:text-muted'
+                  className='block'
                 >
                   <div className='flex gap-2'>
                     {<Icon />} 
                     {label}
                   </div>
-                  
                 </a>
               ))}
             </div>
           </div>
         }
-    </section>
+    </header>
   )
 }
 
