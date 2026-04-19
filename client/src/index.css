@@ -2,14 +2,14 @@
 @import "tailwindcss";
 
 @theme {
-  
+
   --color-primary: #f04c24;
   --color-foreground: #242424;
   --color-muted: #4b545d;
 }
 
 @layer base {
-  
+
   html {
     scroll-behavior: smooth;
   }
@@ -31,6 +31,10 @@
 
   .slide-in-from-bottom {
     animation-name: slideInFromBottom;
+  }
+
+  .slide-in-from-right {
+    animation-name: slideInFromRight;
   }
 
   .duration-200 {
@@ -56,9 +60,11 @@
   .delay-300 {
     animation-delay: 300ms;
   }
+
   .delay-400 {
     animation-delay: 400ms;
   }
+
   .delay-500 {
     animation-delay: 500ms;
   }
@@ -85,5 +91,17 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translatex(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
