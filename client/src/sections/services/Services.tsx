@@ -27,11 +27,11 @@ const serviceData = [
 const Services = () => {
   return (
     <section id='services' className="relative overflow-hidden py-32">
-      <div className="text-center mx-auto max-w-3xl px-6 mb-16">
+      <div className="text-center mx-auto max-w-3xl px-4 mb-16">
         <span className="text-primary text-sm font-medium tracking-wider uppercase">WHAT WE DO</span>
         <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">Expert Drywall Repair Services</h2>
       </div>
-      <div className="container mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {serviceData.map(({ img, alt, heading, description }) => (
           <Card img={img} alt={alt} heading={heading} description={description} />
         ))}
