@@ -4,7 +4,7 @@ import smooth from '../../assets/services/smooth.jpg'
 import remodeled from '../../assets/services/remodeled.jpg'
 
 const serviceData = [
-  { 
+  {
     img: patch,
     alt: 'drywall patched around electrical wiring',
     heading: 'Drywall Patching',
@@ -26,17 +26,16 @@ const serviceData = [
 
 const Services = () => {
   return (
-    <section id='services' className="py-32 flex flex-col px-4 sm:px-6 lg:px-16">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center mb-12">
-          <span className="text-primary font-bold tracking-wider leading-tight">WHAT WE DO</span>
-          <h2 className="text-4xl font-bold leading-[1.35] text-center">Expert Drywall Repair Services</h2>
-        </div>
-        <div className="grid lg:grid-cols-3 gap-8">
-          {serviceData.map(({img, alt, heading, description}) => (
-            <Card img={img} alt={alt} heading={heading} description={description}/>
-          ))}
-        </div>
+    <section id='services' className="relative overflow-hidden py-32 px-6">
+      <div className="text-center mx-auto max-w-3xl mb-16">
+        <span className="text-primary text-sm font-medium tracking-wider uppercase">WHAT WE DO</span>
+        <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">Expert Drywall Repair Services</h2>
+
+      </div>
+      <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {serviceData.map(({ img, alt, heading, description }) => (
+          <Card img={img} alt={alt} heading={heading} description={description} />
+        ))}
       </div>
     </section>
   )
