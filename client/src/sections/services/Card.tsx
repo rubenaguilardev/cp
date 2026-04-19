@@ -7,7 +7,7 @@ type Card = {
 
 const Card = ({ img, alt, heading, description }: Card) => {
   return (
-    <div key={heading} className="group rounded-2xl overflow-hidden border border-muted/15 last:md:col-span-2 last:lg:col-span-1">
+    <div key={heading} className="group rounded-2xl overflow-hidden border border-muted/15 last:md:col-span-2 last:lg:col-span-1 shadow-xl">
       <div className="relative overflow-hidden aspect-video">
         <img
           src={img}
